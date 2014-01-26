@@ -31,8 +31,8 @@ int main()
 
 	listen(S, 64); // 64 clients
 
-    	pollfd LISTEN_S; // Vector for sockets
-    	LISTEN_S.fd = S;
+    pollfd LISTEN_S; // Vector for sockets
+    LISTEN_S.fd = S;
 	LISTEN_S.events = POLLIN;
 	vector<pollfd> sockets = vector<pollfd>();
 	sockets.push_back(LISTEN_S);
