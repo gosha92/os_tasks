@@ -11,8 +11,6 @@
 #include <vector>
 #include <iostream>
 
-
-using std::vector;
 using namespace std;
 
 int main()
