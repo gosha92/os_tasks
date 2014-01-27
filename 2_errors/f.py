@@ -19,7 +19,7 @@ def sort_array(arr) :
 				arr[t],arr[t+1] = arr[t+1],arr[t]
 	return (arr)
 
-path = "/num"
+path = "./num"
 
 if not os.path.exists(path):
 	print ("Error: This path isnt exist")
