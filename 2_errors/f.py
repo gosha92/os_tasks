@@ -11,14 +11,6 @@ def throw_var() :
 def readdr_err() :
 	print ("Error was interrupted by walk")
 
-def sort_array(arr) :	
-	n = len(arr)
-	for j in range(1,n-1):
-		for t in range(0,n-j):
-			if int(arr[t]) > int(arr[t+1]) :
-				arr[t],arr[t+1] = arr[t+1],arr[t]
-	return (arr)
-
 path = "./num"
 
 if not os.path.exists(path):
@@ -60,7 +52,7 @@ try:
 						line = line.replace(' ','  ')
 						p = re.compile('\s(\d+)\s')
 						result.extend(p.findall(line))
-					result=sort_array(result)
+					result=sorted(result, key=lambda x:int(x))
 					for match in result :
 						print (match)
 				except:
